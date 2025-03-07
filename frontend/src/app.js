@@ -62,7 +62,7 @@ function App() {
     try {
       params.set('offset', offset);
       params.set('limit', limit);
-      const response = await fetch(`https://apartment-bot-81rv.onrender.com/api/ads?${params.toString()}`);
+      const response = await fetch(`https://https://newtg-gp7w.onrender.com/api/ads?${params.toString()}`);
       const data = await response.json();
       setAds(prev => [...prev, ...(data.ads || [])]);
       setOffset(data.ads ? data.ads.length + offset : offset);
