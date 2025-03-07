@@ -1,0 +1,8 @@
+flask==3.0.2
+flask-cors==4.0.0
+python-telegram-bot==20.6
+beautifulsoup4==4.12.3
+aiohttp==3.9.3
+apscheduler==3.10.4
+hypercorn==0.15.0
+python-dotenv==1.0.1
