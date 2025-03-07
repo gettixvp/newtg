@@ -24,7 +24,7 @@ load_dotenv()
 # Настройки из переменных окружения
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN', '7846698102:AAFR2bhmjAkPiV-PjtnFIu_oRnzxYPP1xVo')
 ADMIN_ID = os.getenv('ADMIN_ID', '854773231')
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = '/app/uploads'
 WEBHOOK_URL = os.getenv('WEBHOOK_URL', 'https://newtg-gp7w.onrender.com')
 KUFAR_LIMIT = int(os.getenv('KUFAR_LIMIT', 7))
 PARSE_INTERVAL = int(os.getenv('PARSE_INTERVAL', 5))
