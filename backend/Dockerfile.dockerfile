@@ -1,8 +1,20 @@
-FROM python:3.12
+# Базовый образ с Python
+FROM python:3.11.11-slim
+
+# Установка рабочей директории
 WORKDIR /app
-COPY backend/requirements.txt .
-RUN pip install -r requirements.txt
-COPY backend/ .
-RUN mkdir -p /app/backend/uploads
-ENV UPLOAD_FOLDER=/app/backend/uploads
+
+# Установка Poetry
+RUN pip install poetry==1.7.1
+
+# Копирование файлов Poetry
+COPY pyproject.toml poetry.lock* ./
+
+# Установка зависимостей
+RUN poetry config virtualenvs.create false && poetry install --no-dev
+
+# Копирование кода
+COPY . .
+
+# Команда запуска (замени на свою)
 CMD ["python", "main.py"]
